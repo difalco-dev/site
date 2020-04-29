@@ -51,12 +51,12 @@ export default function Home() {
                         <HomeBio />
                     </Paper>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Paper className={classes.paper}>
                         <HomeExpertise />
                     </Paper>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Paper className={classes.paperSub}>
                         <HomeEmployers />
                     </Paper>
