@@ -33,8 +33,8 @@ export default function HomeEmployers() {
                     <ListItem>
                         <ListItemText
                             className={{ primary: classes.primary, secondary: classes.secondary }}
-                            primary="Notre Dame Computer Vision Laboratory Contributor"
-                            secondary="Notre Dame, Indiana" />
+                            primary="Notre Dame Computer Vision Research Laboratory Contributor"
+                            secondary="Notre Dame, IN" />
                     </ListItem>
                     <ListItem>
                         <ListItemText
