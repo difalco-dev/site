@@ -10,10 +10,12 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
 import PersonIcon from '@material-ui/icons/Person';
+import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty';
 import BusinessIcon from '@material-ui/icons/Business';
 import {AiFillLinkedin} from 'react-icons/ai';
 import {IconContext} from 'react-icons';
 import Home from './Home';
+import Loading from './Loading';
 import Work from './Work';
 import Contact from './Contact';
 
@@ -86,14 +88,14 @@ export default function SideNav() {
     const classes = useStyles();
 
     const directions = ["up","left","down"];
-    const mainDiv = [<Home />]//, <Work />, <Contact />];
+    const mainDiv = [<Home />, <Loading />];//, <Work />, <Contact />];
 
     const openLinkedIn = () => {
         window.open("https://www.linkedin.com/in/anthony-difalco-22a6b7172/", "_blank");
         window.focus();
     };
 
-    const tabs = [['About', <PersonIcon />]];//, ['Work', <BusinessIcon />], ['Contact', <MailIcon />]];
+    const tabs = [['About', <PersonIcon />],['Loading',<HourglassEmptyIcon />]];//, ['Work', <BusinessIcon />], ['Contact', <MailIcon />]];
 
     const handleClick = (index) => {
         setSlideOne({ slide: false });
