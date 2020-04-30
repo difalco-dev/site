@@ -18,7 +18,7 @@ import Work from './Work';
 import Contact from './Contact';
 
 
-const drawerWidth = 80;
+const drawerWidth = 64;
 
 const initState = { locator: 0, prev: 0 };
 const initSlide = { slide: true, direction : "down" };
@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     listItem: {
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'center',
         textDecoration: "none",
         "&:hover, &:focus": {
             backgroundColor: theme.palette.background.yellow
@@ -64,7 +65,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.light
     },
     linkIcon: {
-        marginRight: theme.spacing(1),
         color: theme.palette.text.secondary + "99",
         transition: theme.transitions.create("color"),
         display: "flex",
@@ -114,7 +114,7 @@ export default function SideNav() {
                                 <ListItemText primary={item[0]} className={classes.linkText}/>
                             </ListItem> ))}
                 </List>
-                <IconContext.Provider value={{ color: "gray", size: 56 }}>
+                <IconContext.Provider value={{ color: 'rgba(0, 0, 0, 0.54)', transition: classes.linkIcon.transition,size: 44 }}>
                     <div onClick={() => { openLinkedIn() }} style={{ backgroundColor:'#03ecfc'}}>
                         <AiFillLinkedin />
                     </div>

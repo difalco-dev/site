@@ -5,25 +5,27 @@ import Avatar from '@material-ui/core/Avatar';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-        display:'flex',
-        flexDirection:'row',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
         alignContent: 'center',
-        
     },
     titles: {
         dispay: 'flex',
         flexDirection: 'column',
-        justifyConent:'center',
-        alignContent:'center',
+        justifyConent: 'center',
+        alignContent: 'center',
+        maxWidth: '90%',
+    },
+    text: {
+        overflowWrap: 'hyphens',
     },
     subTitle: {
         paddingBottom: 8,
     },
     large: {
         width: theme.spacing(17),
-        height: theme.spacing(17),
-        marginRight: theme.spacing(10)
+        height: theme.spacing(17)
     },
 }));
 
@@ -34,12 +36,12 @@ export default function HomeTitle(){
         <div className={classes.root}>
             <Avatar src="./images/me.jpg" alt="me.jpeg" className={classes.large} />
             <div className={classes.titles}>
-                <Typography variant="h2">
-                    Anthony Di Falco
+                <Typography variant="h2" className={classes.text}>
+                    <div style={{overflowWrap:'hyphens'}}>Anthony Di Falco</div>
                 </Typography>
                 <Typography variant="h6" >
-                    (Fullstack Developer) {'&&'} (Automation Consultant)
-                 </Typography>
+                    Fullstack Developer {'&'} Automation Consultant
+                </Typography>
             </div>
         </div>
     );

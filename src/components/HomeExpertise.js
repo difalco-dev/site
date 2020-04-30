@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     secondary: {
         fontSize: '0.2em',
     },
+    list: {
+        maxWidth: '50%',
+    },
     listRow: {
         display: 'flex',
         flexDirection: 'row',
@@ -25,11 +28,11 @@ export default function HomeExpertise() {
         <div>
             <Typography variant="subtitle1"><b>Areas of Expertise</b></Typography>
             <div className={classes.listRow}>
-                <List>
+                <List className={classes.list}>
                     <ListItem>
                         <ListItemText
                             className={{ primary: classes.primary, secondary: classes.secondary }}
-                            primary="Applciation Development"
+                            primary="Application Development"
                             secondary="Web & Desktop & Mobile" />
                     </ListItem>
                     <ListItem>
@@ -45,24 +48,24 @@ export default function HomeExpertise() {
                             secondary="Discovery & Proposals & Delivery" />
                     </ListItem>
                 </List>
-                <List>
+                <List className={classes.list}>
                     <ListItem>
                         <ListItemText
                             className={{ primary: classes.primary, secondary: classes.secondary }}
-                            primary="Varied Industry Experience"
+                            primary="Experience in Multiple Industries"
                             secondary="Unqiue Business Process Insights" />
                     </ListItem>
                     <ListItem>
                         <ListItemText
                             className={{ primary: classes.primary, secondary: classes.secondary }}
-                            primary="AWS Content Delviey"
+                            primary="AWS Content Delivery"
                             secondary="AWS Amplify & EC2 & Elastic Beanstalk" />
                     </ListItem>
                     <ListItem>
                         <ListItemText
                             className={{ primary: classes.primary, secondary: classes.secondary }}
-                            primary="Client Communication"
-                            secondary="Countless Satisfied Clients" />
+                            primary="Communication"
+                            secondary="Presentations & Training Sessions" />
                     </ListItem>
                 </List>
             </div>           

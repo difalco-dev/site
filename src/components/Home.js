@@ -35,8 +35,8 @@ export default function Home() {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <Grid container spacing={2}>
-                <Grid item xs={12} sm={9}>
+            <Grid container spacing={2} wrap="wrap">
+                <Grid item xs={12} sm={9} style={{flexShrink: 1}}>
                     <Paper className={classes.paper}>
                         <HomeTitle />
                     </Paper>
@@ -61,11 +61,6 @@ export default function Home() {
                         <HomeEmployers />
                     </Paper>
                 </Grid>
-                {/*<Grid item xs={12}>
-                    <Paper className={classes.paper}>
-                        <HomeHobbies />
-                    </Paper>
-                </Grid>*/}
             </Grid>
         </div>
     );
